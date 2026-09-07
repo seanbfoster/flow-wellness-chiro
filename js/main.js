@@ -18,57 +18,6 @@
     });
   }
 
-  var floor = doc.querySelector('.floor');
-  if (floor) {
-    var fill = floor.querySelector('.fill');
-    var here = floor.querySelector('.here');
-    var zones = Array.prototype.slice.call(doc.querySelectorAll('[data-zone]:not(a)'));
-    var navLinks = Array.prototype.slice.call(doc.querySelectorAll('.nav a[data-zone]'));
-    var mobile = window.matchMedia('(max-width: 860px)');
-    var ticking = false;
-
-    function update() {
-      ticking = false;
-      var scrollY = window.scrollY;
-      var max = doc.documentElement.scrollHeight - window.innerHeight;
-      var p = max > 0 ? Math.min(1, scrollY / max) : 0;
-      var probe = scrollY + window.innerHeight * 0.38;
-      var current = null;
-      for (var i = 0; i < zones.length; i++) {
-        var top = zones[i].getBoundingClientRect().top + scrollY;
-        if (top <= probe) current = zones[i];
-      }
-      var color = current ? current.getAttribute('data-color') : 'var(--teal)';
-      floor.style.setProperty('--floor', color);
-      if (mobile.matches) {
-        floor.style.setProperty('--p', p.toFixed(4));
-      } else {
-        var h = p * window.innerHeight;
-        fill.style.height = h + 'px';
-        here.style.top = Math.max(h, 80) + 'px';
-        var label = current ? current.querySelector('.sign-label') : null;
-        here.textContent = label ? label.textContent.trim().split('·')[0].trim() : 'Start here';
-      }
-      floor.classList.toggle('on', scrollY > 40);
-      var id = current ? current.id : '';
-      navLinks.forEach(function (a) {
-        a.setAttribute('aria-current', a.getAttribute('href') === '#' + id ? 'true' : 'false');
-        if (a.getAttribute('aria-current') !== 'true') a.removeAttribute('aria-current');
-      });
-    }
-
-    function onScroll() {
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(update);
-      }
-    }
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
-    update();
-  }
-
   var reveals = doc.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && !reduce) {
     var io = new IntersectionObserver(function (entries) {
