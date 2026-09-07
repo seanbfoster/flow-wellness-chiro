@@ -4,17 +4,24 @@
 
   var toggle = doc.querySelector('.nav-toggle');
   var nav = doc.getElementById('nav');
+  function setNav(open) {
+    nav.classList.toggle('open', open);
+    doc.body.classList.toggle('nav-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
   if (toggle && nav) {
     toggle.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      setNav(!nav.classList.contains('open'));
     });
     nav.addEventListener('click', function (e) {
-      if (e.target.closest('a')) {
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
+      if (e.target.closest('a')) setNav(false);
+    });
+    doc.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('open')) { setNav(false); toggle.focus(); }
+    });
+    window.matchMedia('(min-width: 901px)').addEventListener('change', function (m) {
+      if (m.matches) setNav(false);
     });
   }
 
