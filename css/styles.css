@@ -260,10 +260,9 @@ h3 {
 
 /* ---------- Buttons ---------- */
 
-.nav-cta {
+.nav .nav-cta.btn {
   display: none;
 }
-
 
 .btn {
   appearance: none;
@@ -1284,7 +1283,7 @@ h3 {
     font-size: 0.85rem;
   }
 
-  .nav .nav-cta {
+  .nav .nav-cta.btn {
     display: inline-flex;
     margin-top: 0.75rem;
     color: #fff;
