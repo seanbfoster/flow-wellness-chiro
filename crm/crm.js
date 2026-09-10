@@ -166,6 +166,16 @@
 
   /* ---------- helpers ---------- */
 
+  var SRC_ICON = {
+    meta: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#0866FF" d="M6.9 4.5C4.2 4.5 2 8.1 2 12.6c0 3 1.3 4.9 3.4 4.9 1.6 0 2.8-1 4.5-4.2l1.1-2.2.5-1 .5-.9.9 1.7.9 1.7c1.8 3.7 3.1 4.9 4.9 4.9 2 0 3.3-1.8 3.3-4.9 0-4.6-2.2-8.1-4.9-8.1-2 0-3.3 1.5-5.1 4.6C10.3 6 9 4.5 6.9 4.5zm.3 2.4c1.1 0 2 1.2 3.4 3.7l-.3.6-1 1.9c-1.3 2.4-1.9 3-2.7 3-.9 0-1.5-1-1.5-2.7 0-3.7 1-6.5 2.1-6.5zm9.6 0c1.2 0 2.2 2.8 2.2 6.1 0 1.7-.5 2.6-1.4 2.6-.8 0-1.4-.7-2.7-3.2l-1-1.9c1.2-2.4 2.1-3.6 2.9-3.6z"/></svg>',
+    google: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.6v3h3.9c2.3-2.1 3.5-5.2 3.5-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 7.9-2.9l-3.9-3c-1.1.7-2.4 1.2-4 1.2-3.1 0-5.7-2.1-6.7-4.9H1.3v3.1C3.3 21.4 7.3 24 12 24z"/><path fill="#FBBC05" d="M5.3 14.4c-.2-.7-.4-1.5-.4-2.4s.1-1.6.4-2.4V6.5H1.3C.5 8.2 0 10 0 12s.5 3.8 1.3 5.5l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4C17.9 1.2 15.2 0 12 0 7.3 0 3.3 2.6 1.3 6.5l4 3.1c1-2.8 3.6-4.8 6.7-4.8z"/></svg>',
+    website: '<svg viewBox="0 0 24 24" aria-hidden="true" class="line"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>',
+    referral: '<svg viewBox="0 0 24 24" aria-hidden="true" class="line"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6M18 8v6M15 11h6"/></svg>'
+  };
+  function srcPill(k, label) {
+    return '<span class="pill src src-' + k + '">' + SRC_ICON[k] + (label ? '<span>' + label + '</span>' : '') + '</span>';
+  }
+
   function fill(t, l) {
     return t.replace(/\{first\}/g, l.first)
       .replace(/\{interest\}/g, (l.interests[0] || 'care').toLowerCase())
@@ -314,7 +324,7 @@
         var last = acts(l.id)[0];
         return '<tr data-id="' + l.id + '" tabindex="0">' +
           '<td><span class="name">' + (needsAttention(l) ? '<span class="dot"></span>' : '') + esc(fullName(l)) + '</span><span class="sub">' + esc(l.phone) + ' · ' + esc(l.who) + '</span></td>' +
-          '<td><span class="pill src src-' + l.source + '">' + SOURCES[l.source].short + '</span><span class="sub">' + esc(l.campaign) + '</span></td>' +
+          '<td>' + srcPill(l.source, SOURCES[l.source].short) + '<span class="sub">' + esc(l.campaign) + '</span></td>' +
           '<td><span class="pill stage-' + l.stage + '">' + l.stage + '</span></td>' +
           '<td class="hide-m small">' + esc(l.interests.slice(0, 2).join(', ')) + '</td>' +
           '<td class="small">' + (l.nextAction ? esc(l.nextAction) : '<span class="muted">—</span>') + '</td>' +
@@ -352,7 +362,7 @@
       '<a class="back" href="#/leads">&larr; Leads</a>' +
       '<div class="lead-head"><div>' +
       '<h1>' + esc(fullName(l)) + '</h1>' +
-      '<div class="meta"><span class="pill src src-' + l.source + '">' + SOURCES[l.source].name + '</span><span>' + esc(l.campaign) + '</span><span>Prefers <strong>' + esc(l.preferred) + '</strong></span><span>Added ' + rel(l.createdAt) + '</span>' +
+      '<div class="meta">' + srcPill(l.source, SOURCES[l.source].name) + '<span>' + esc(l.campaign) + '</span><span>Prefers <strong>' + esc(l.preferred) + '</strong></span><span>Added ' + rel(l.createdAt) + '</span>' +
       (l.chirohdRef ? '<span>ChiroHD <strong>' + esc(l.chirohdRef) + '</strong></span>' : '') + '</div>' +
       '</div><div class="actions">' +
       (converted
@@ -705,7 +715,7 @@
         var booked = ls.filter(function (l) { return l.stage === 'Booked' || l.stage === 'Patient'; });
         var last = ls.slice().sort(function (a, b) { return b.createdAt - a.createdAt; })[0];
         var on = k !== 'referral';
-        return '<div class="card src-card"><div class="top"><div><h3 style="margin-bottom:0"><span class="pill src src-' + k + '"></span>' + SOURCES[k].name + '</h3></div><span class="status' + (on ? '' : ' off') + '">' + (on ? '<span class="dot teal"></span>Connected' : '<span class="dot grey"></span>Manual entry') + '</span></div>' +
+        return '<div class="card src-card"><div class="top"><div><h3 style="margin-bottom:0" class="src-title">' + srcPill(k) + SOURCES[k].name + '</h3></div><span class="status' + (on ? '' : ' off') + '">' + (on ? '<span class="dot teal"></span>Connected' : '<span class="dot grey"></span>Manual entry') + '</span></div>' +
           '<p class="desc">' + srcDesc(k) + '</p>' +
           '<div class="nums"><div><div class="n">' + recent.length + '</div><span class="micro">Leads · 30d</span></div><div><div class="n">' + booked.length + '</div><span class="micro">Booked</span></div><div><div class="n">' + (recent.length ? Math.round(booked.length / ls.length * 100) : 0) + '%</div><span class="micro">Book rate</span></div></div>' +
           '<div class="foot"><span class="small">' + (last ? 'Last lead ' + rel(last.createdAt) + ' · ' + esc(fullName(last)) : 'No leads yet') + '</span>' +
@@ -905,6 +915,20 @@
       toast('Lead added');
     });
   }
+
+  /* ---------- Theme ---------- */
+
+  function setTheme(t) {
+    doc.documentElement.setAttribute('data-theme', t);
+    try { localStorage.setItem('fwc-leaddesk-theme', t); } catch (e) {}
+    doc.querySelectorAll('[data-theme-toggle] .label').forEach(function (el) { el.textContent = t === 'dark' ? 'Light mode' : 'Dark mode'; });
+  }
+  doc.querySelectorAll('[data-theme-toggle]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      setTheme(doc.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  });
+  doc.querySelectorAll('[data-theme-toggle] .label').forEach(function (el) { el.textContent = doc.documentElement.getAttribute('data-theme') === 'dark' ? 'Light mode' : 'Dark mode'; });
 
   /* ---------- Sidebar wiring ---------- */
 
