@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lead Desk · Flow Wellness Chiropractic</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../assets/img/favicon-64.png">
+  <link rel="stylesheet" href="crm.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <aside class="side">
+    <a class="brand" href="#/leads">
+      <img src="../assets/img/logo-mark.png" alt="">
+      <span>Flow<small>Lead Desk</small></span>
+    </a>
+    <nav class="side-nav" aria-label="Primary">
+      <a href="#/leads" data-view="leads">Leads <b id="nav-leads-count"></b></a>
+      <a href="#/activity" data-view="activity">Activity</a>
+      <a href="#/automations" data-view="automations">Automations</a>
+      <a href="#/sources" data-view="sources">Sources</a>
+    </nav>
+    <div class="side-foot">
+      <button class="btn sm block" id="btn-new-lead" type="button">New lead</button>
+      <button class="link-btn" id="btn-simulate" type="button">Simulate incoming lead</button>
+      <p class="who">Signed in as <strong>Front desk</strong></p>
+      <button class="link-btn muted" id="btn-reset" type="button">Reset demo data</button>
+    </div>
+  </aside>
+
+  <header class="mobile-head">
+    <a class="brand" href="#/leads"><img src="../assets/img/logo-mark.png" alt=""><span>Flow<small>Lead Desk</small></span></a>
+    <nav aria-label="Primary" class="mobile-nav">
+      <a href="#/leads" data-view="leads">Leads</a>
+      <a href="#/activity" data-view="activity">Activity</a>
+      <a href="#/automations" data-view="automations">Automations</a>
+      <a href="#/sources" data-view="sources">Sources</a>
+    </nav>
+  </header>
+
+  <main id="main" class="main"></main>
+
+  <div class="modal-root" id="modal-root" hidden></div>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="crm.js"></script>
+</body>
+</html>
