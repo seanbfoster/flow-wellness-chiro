@@ -1304,7 +1304,9 @@ h3 {
 }
 
 .site-foot .brand {
+  flex-direction: column;
   justify-content: center;
+  gap: 0.9rem;
   font-size: 1.7rem;
 }
 
