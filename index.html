@@ -6,6 +6,7 @@
   <title>Flow Wellness Chiropractic | Pediatric &amp; Family Gonstead Chiropractor</title>
   <meta name="description" content="Flow Wellness Chiropractic is a pediatric and family-focused Gonstead chiropractic office opening Winter 2026 on Florida's Space Coast. Reserve your spot before scheduling opens.">
   <meta name="theme-color" content="#112f5b">
+  <link rel="canonical" href="https://www.flowwellnesschiro.com/">
   <link rel="icon" href="assets/img/favicon-64.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/Cormorant-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -13,7 +14,8 @@
   <link rel="stylesheet" href="css/styles.css">
   <meta property="og:title" content="Flow Wellness Chiropractic">
   <meta property="og:description" content="Discover wellness. Specific Gonstead chiropractic for families, opening Winter 2026 on the Space Coast.">
-  <meta property="og:image" content="assets/img/dunes-sm.webp">
+  <meta property="og:image" content="https://www.flowwellnesschiro.com/assets/img/dunes-sm.webp">
+  <meta property="og:url" content="https://www.flowwellnesschiro.com/">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -103,15 +105,6 @@
             </div>
 
             <fieldset class="group" data-required>
-              <legend>Preferred method of contact</legend>
-              <div class="seg">
-                <label><input type="radio" name="contact" value="Text"><span>Text</span></label>
-                <label><input type="radio" name="contact" value="Call"><span>Call</span></label>
-                <label><input type="radio" name="contact" value="Email"><span>Email</span></label>
-              </div>
-            </fieldset>
-
-            <fieldset class="group" data-required>
               <legend>Who is seeking care?</legend>
               <div class="seg">
                 <label><input type="radio" name="who" value="Myself"><span>Myself</span></label>
@@ -120,48 +113,8 @@
               </div>
             </fieldset>
 
-            <details class="more">
-              <summary>Tell us a little more (optional)
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
-              </summary>
-              <div class="inner">
-                <fieldset class="group">
-                  <legend>What are you interested in receiving care for?</legend>
-                  <div class="seg">
-                    <label><input type="checkbox" name="interest" value="Wellness and preventative care"><span>Wellness &amp; preventative care</span></label>
-                    <label><input type="checkbox" name="interest" value="Nervous system function"><span>Nervous system function</span></label>
-                    <label><input type="checkbox" name="interest" value="Back pain"><span>Back pain</span></label>
-                    <label><input type="checkbox" name="interest" value="Neck pain"><span>Neck pain</span></label>
-                    <label><input type="checkbox" name="interest" value="Family care"><span>Family care</span></label>
-                    <label><input type="checkbox" name="interest" value="Pregnancy"><span>Pregnancy</span></label>
-                    <label><input type="checkbox" name="interest" value="Infants & children"><span>Infants &amp; children</span></label>
-                    <label><input type="checkbox" name="interest" value="Athletic performance"><span>Athletic performance</span></label>
-                    <label><input type="checkbox" name="interest" value="Headaches/Migraines"><span>Headaches / migraines</span></label>
-                    <label><input type="checkbox" name="interest" value="Mobility"><span>Mobility</span></label>
-                    <label><input type="checkbox" name="interest" value="Stress resilience"><span>Stress resilience</span></label>
-                    <label><input type="checkbox" name="interest" value="Other"><span>Other</span></label>
-                  </div>
-                </fieldset>
-                <label class="field">
-                  <span>How did you hear about us?</span>
-                  <select name="source">
-                    <option value="">Choose one</option>
-                    <option>Community event</option>
-                    <option>Instagram</option>
-                    <option>Facebook</option>
-                    <option>Google search</option>
-                    <option>Our website</option>
-                    <option>Health talk</option>
-                    <option>Family or Friend</option>
-                    <option>Referral from another healthcare provider</option>
-                    <option>Flyer or business card</option>
-                    <option>Other</option>
-                  </select>
-                </label>
-              </div>
-            </details>
-
             <button class="btn block" type="submit">Reserve my spot</button>
+            <p class="form-error hidden" id="intake-error" role="alert">We couldn't send your details. Please try again, or call us at (716) 777-2047.</p>
             <p class="fine">No commitment. We only use this to let you know when scheduling opens.</p>
           </form>
 
@@ -187,14 +140,84 @@
       </div>
     </section>
 
-    <section class="section testimonial">
-      <div class="narrow center reveal">
-        <div class="mark" aria-hidden="true">&ldquo;</div>
-        <blockquote>
-          <p>Dr. Corey has provided care for my 4 year old son and we've had an exceptional experience. I had never considered seeking care from a chiropractor for him. He was diagnosed with Cerebral Palsy when he was around 2 years old and I am always looking for ways to help his mobility in any way I can. Honestly, I was a bit skeptical, as I think many are, but I am so glad we gave it a shot.</p>
-          <p>He's had continuous digestive struggles that have improved immensely since starting with Dr. Corey, as well as continuous improvement in his overall strength and physical health. She has made him feel so comfortable and he actually looks forward to his appointments with her! I'm so happy with the care he's gotten and would recommend to anyone.</p>
-          <cite>Megan K.</cite>
-        </blockquote>
+    <section class="section testimonial" aria-labelledby="testimonials-title">
+      <div class="wrap">
+        <div class="quotes-head">
+          <p class="eyebrow">In their words</p>
+          <h2 class="reveal" id="testimonials-title">What practice members say.</h2>
+        </div>
+        <ul class="quotes" data-quotes tabindex="0" aria-label="Testimonials">
+          <li class="quote">
+            <figure>
+              <blockquote>
+                <p>Dr. Corey has provided care for my 4 year old son and we've had an exceptional experience. I had never considered seeking care from a chiropractor for him. He was diagnosed with Cerebral Palsy when he was around 2 years old and I am always looking for ways to help his mobility in any way I can. Honestly, I was a bit skeptical, as I think many are, but I am so glad we gave it a shot.</p>
+                <p>He's had continuous digestive struggles that have improved immensely since starting with Dr. Corey, as well as continuous improvement in his overall strength and physical health. She has made him feel so comfortable and he actually looks forward to his appointments with her! I'm so happy with the care he's gotten and would recommend to anyone.</p>
+              </blockquote>
+              <button class="quote-more" type="button" aria-expanded="false" hidden>Read more</button>
+              <figcaption>Megan K.</figcaption>
+            </figure>
+          </li>
+          <li class="quote">
+            <figure>
+              <blockquote>
+                <p>I've had a great experience under Dr. Carter's care. He takes his time with you each visit and is extremely thorough, which makes you feel genuinely valued as a patient. I came in with ongoing shoulder issues, and through his care, I've experienced a significant reduction in pain.</p>
+                <p>He also provided practical home care exercises that have helped me maintain progress outside the office. The level of attention to detail and overall quality of care he provides truly stands out.</p>
+              </blockquote>
+              <button class="quote-more" type="button" aria-expanded="false" hidden>Read more</button>
+              <figcaption>John W.</figcaption>
+            </figure>
+          </li>
+          <li class="quote">
+            <figure>
+              <blockquote>
+                <p>Before seeing Dr. Corey, I was dealing with frequent dizziness, headaches, and constant soreness in my neck. She took the time to really listen to what I was experiencing and tried a different approach that has really helped me.</p>
+                <p>My dizziness and neck pain have improved a lot, and I finally feel like I'm making progress. Dr. Corey is incredibly kind, patient, and thoughtful in the way she treats her patients, and I highly recommend her.</p>
+              </blockquote>
+              <button class="quote-more" type="button" aria-expanded="false" hidden>Read more</button>
+              <figcaption>Ashley H.</figcaption>
+            </figure>
+          </li>
+          <li class="quote">
+            <figure>
+              <blockquote>
+                <p>I've been seeing Dr. Carter for chiropractic care for the past couple months, and the results have been incredible.</p>
+                <p>Before starting care, I struggled with severe and prolonged menstrual cramps leading up to my cycle. Since receiving care from Dr. Carter, those symptoms have completely resolved!</p>
+              </blockquote>
+              <button class="quote-more" type="button" aria-expanded="false" hidden>Read more</button>
+              <figcaption>Marissa M.</figcaption>
+            </figure>
+          </li>
+          <li class="quote">
+            <figure>
+              <blockquote>
+                <p>When I first started care with Dr. Corey, I was dealing with severe hip pain that radiated from the front of my hip through my low back and down my leg, making everyday movement uncomfortable. Through consistent weekly care and specific adjustments tailored to my needs, I noticed a huge improvement in both my pain levels and mobility.</p>
+              </blockquote>
+              <button class="quote-more" type="button" aria-expanded="false" hidden>Read more</button>
+              <figcaption>Emma D.</figcaption>
+            </figure>
+          </li>
+          <li class="quote">
+            <figure>
+              <blockquote>
+                <p>Dr. Carter is an exceptional practitioner. He is very detailed and thorough in his approach, and is very communicative.</p>
+                <p>He listens to your concerns and involves you in the care needed. I highly recommend him to others seeking help.</p>
+              </blockquote>
+              <button class="quote-more" type="button" aria-expanded="false" hidden>Read more</button>
+              <figcaption>Millie M.</figcaption>
+            </figure>
+          </li>
+        </ul>
+        <div class="quotes-foot">
+          <div class="quote-nav" data-quote-nav hidden>
+            <button class="quote-btn" type="button" data-dir="-1" aria-label="Earlier testimonials">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button class="quote-btn" type="button" data-dir="1" aria-label="More testimonials">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+          <p class="quotes-cta"><span>Ready to begin?</span><a class="btn ghost sm" href="#reserve">Reserve your spot</a></p>
+        </div>
       </div>
     </section>
 
@@ -351,6 +374,7 @@
         <a href="faq.html">FAQ</a>
       </nav>
       <p class="foot-legal">© 2026 Flow Wellness Chiropractic · Space Coast, Florida</p>
+      <p class="foot-site"><a href="https://sfostr.com">sfostr.com</a></p>
     </div>
   </footer>
 
