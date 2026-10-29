@@ -13,13 +13,13 @@ Static HTML/CSS/JS, no framework, no backend. Delegated by the user ("front end 
 Parents in Palm Beach County, Florida researching a chiropractor for their child, their pregnancy, or their whole family. Secondary: adults with back/neck pain, headaches, or a wellness mindset, and athletes. Most arrive from Instagram, Facebook, Google, a community event, or a friend, usually on a phone. Their job: decide whether this practice is credible and gentle enough for their kids, then get on the list for one of the first appointments.
 
 ## Product Purpose
-Marketing site for Flow Wellness Chiropractic, a new family-and-pediatric-focused Gonstead chiropractic practice opening Winter 2026 in Palm Beach County. The site exists to explain the Gonstead method, introduce the two doctors, answer the questions a hesitant parent has, and collect "reserve your spot" leads before the schedule opens. Success = a visitor submits the interest form.
+Marketing site for Flow Wellness Chiropractic, a new family-and-pediatric-focused Gonstead chiropractic practice opening Winter 2027 in Palm Beach County. The site exists to explain the Gonstead method, introduce the two doctors, answer the questions a hesitant parent has, and collect "reserve your spot" leads before the schedule opens. Success = a visitor submits the interest form.
 
 ## Positioning
 Specific Gonstead chiropractic: precise, objective-findings-based analysis (case history, X-ray when clinically appropriate, Nervoscope instrumentation, visualization, palpation) rather than routine adjusting. "To see is to know and to not see is to guess." Pediatric and prenatal specialty run by a husband-and-wife pair of Palmer Florida graduates and former collegiate athletes (swimmer, gymnast).
 
 ## Operating Context
-- Practice is pre-opening ("Coming Winter 2026"); no address published yet, no online booking live.
+- Practice is pre-opening ("Coming Winter 2027"); no address published yet, no online booking live.
 - Contact: (716) 777-2047, office@flowwellnesschiro.com, Instagram @flowwellnesschiro, Facebook page.
 - Existing lead capture is a Google Form ("Future Practice Member Interest Form"); the rebuilt site's native form mirrors its fields but, per the user, only shows an on-page success state for now.
 
@@ -28,7 +28,7 @@ Specific Gonstead chiropractic: precise, objective-findings-based analysis (case
 - Lead form fields (from the Google Form): First name, Last name, Email, Phone, Preferred contact (Text/Call/Email), Who is seeking care (Myself / My child / Myself and my family / other), Interests (multi: Wellness and preventative care, Nervous system function, Back pain, Neck pain, Family care, Pregnancy, Infants & children, Athletic performance, Headaches/Migraines, Mobility, Stress resilience, Other), How did you hear about us (Community event, Instagram, Facebook, Google search, Our website, Health talk, Family or Friend, Referral from another healthcare provider, Flyer or business card, Other).
 - Front end only; no backend, no third-party form services. Must look excellent on mobile and desktop.
 - Terminology: "practice member" (their term), "adjustment", "nervous system", "Gonstead".
-- Undecided: physical address, opening date beyond "Winter 2026", pricing, insurance. Never invent these.
+- Undecided: physical address, opening date beyond "Winter 2027", pricing, insurance. Never invent these.
 
 ## Brand Commitments
 - Name: Flow Wellness Chiropractic. Logo mark (figure-with-spine, teal) is the only surviving visual asset; user chose a full visual replacement of palette and type.
