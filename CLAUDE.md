@@ -34,6 +34,8 @@ framework, no packages. Cloudflare serves it straight from the `main` branch of 
   reuse the classes in `css/styles.css` instead of adding new colors, fonts or one-off styles.
 - The header, footer, phone, email and social links repeat on every page. When one changes,
   change it in every `.html` file.
+  The phone, email, address, social links and doctors are also in the business details for
+  Google (`application/ld+json`) in the `<head>` of `index.html`; update them there too.
 - Every page footer ends with the `sfostr.com` link (`.foot-site`). Keep it.
 - A new page copies the `<head>`, header and footer of `about.html`, gets its own title,
   description and canonical link, goes in the nav and footer of every page, and goes in
