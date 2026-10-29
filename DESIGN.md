@@ -7,8 +7,8 @@ A polished, minimal evolution of the practice's original identity: Cormorant Gar
 
 ## Palette (css/styles.css :root)
 - Paper `#fcfbf9`, paper-2 `#f5f2ec` (form section, doctors band)
-- Ink `#112f5b` (body emphasis, nav, wordmark), ink-2 `#4b5b72` (body), ink-3 `#8a94a3` (placeholders, legal)
-- Teal `#1eadbe` (brand), teal-deep `#076676` (headings, buttons, eyebrows, links, focus)
+- Ink `#112f5b` (body emphasis, nav), ink-2 `#4b5b72` (body), ink-3 `#8a94a3` (placeholders, legal)
+- Teal `#1eadbe` (brand), teal-deep `#076676` (headings, logo wordmark, buttons, eyebrows, links, focus)
 - Sand `#cbb492` (short rules, quote mark, link underlines), sand-tint `#efe7d8` (testimonial band)
 - Lines: ink at 14% / 8%
 
