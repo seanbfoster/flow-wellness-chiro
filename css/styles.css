@@ -92,6 +92,7 @@ h1,
 h2,
 h3 {
   margin: 0;
+  color: var(--teal-deep);
   font-family: var(--serif);
   font-weight: 500;
   line-height: 1.08;
