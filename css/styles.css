@@ -781,7 +781,7 @@ h3 {
   font-size: 3.5rem;
   line-height: 0.6;
   color: var(--sand);
-  margin: 0.4rem 0 1rem;
+  margin: 0.4rem 0 0.6rem;
 }
 
 .quote blockquote {
@@ -789,7 +789,7 @@ h3 {
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.15rem, 1.45vw, 1.3rem);
+  font-size: clamp(1.2rem, 1.55vw, 1.35rem);
   line-height: 1.5;
   color: var(--ink);
   text-wrap: pretty;
@@ -800,13 +800,13 @@ h3 {
 }
 
 .is-clamp .quote:not(.is-open) blockquote {
-  max-height: 10.5em;
+  max-height: 13.5em;
   overflow: hidden;
 }
 
 .is-clamp .quote.is-long:not(.is-open) blockquote {
-  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 3em), transparent);
-  mask-image: linear-gradient(to bottom, #000 calc(100% - 3em), transparent);
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 2.5em), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 2.5em), transparent);
 }
 
 .quote-more {

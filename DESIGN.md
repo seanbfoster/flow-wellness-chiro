@@ -21,9 +21,9 @@ A polished, minimal evolution of the practice's original identity: Cormorant Gar
 - Sticky translucent header: serif wordmark + logo mark left, centered uppercase nav with 1px teal underline on hover/current, small square teal button right. Mobile: circular toggle, stacked centered menu with the Reserve button inside.
 - Hero: full-bleed dune photograph under a light paper gradient wash; centered eyebrow, serif headline with italic emphasis, light lede, primary + ghost buttons; small uppercase note at the bottom.
 - Buttons: 2px radius, uppercase tracked, teal-deep fill (hover to ink); ghost variant with hairline border.
-- Reserve section: paper-2 band, sticky serif copy on the left, form on the right with underline-only inputs, uppercase micro labels, square outlined choice chips (ink fill when selected), an expandable "Tell us a little more" row, full-width submit, on-page success state.
+- Reserve section: paper-2 band, sticky serif copy on the left, form on the right with underline-only inputs, uppercase micro labels, square outlined choice chips (ink fill when selected), full-width submit, on-page success state. The fields mirror the practice's Google Form, which receives every submission.
 - Purpose: centered serif body copy at 1.35–1.7rem under a 40px sand rule.
-- Testimonial: sand-tint band, italic serif quote, sand quote mark, uppercase cite.
+- Testimonials: sand-tint band, left-aligned eyebrow "In their words" + h2, then a horizontal scroll-snap row of paper cards (3 across desktop, 2 tablet, 84% width with the next card peeking on phones). Each card: small sand quote mark, italic serif quote trimmed to 9 lines with a fade and a "Read more" / "Show less" text button, em-dash uppercase cite pinned to the bottom. Footer row: "Ready to begin?" + ghost Reserve button left, round hairline prev/next buttons right (above the button on phones), disabled at the ends. No autoplay. Without JavaScript the row still scrolls and nothing is trimmed.
 - Approach: five-column list under a hairline with Roman numerals in teal-deep serif.
 - Services: three columns separated by hairlines, thin-stroke glyphs, centered serif titles.
 - Doctors: two 4:5 portraits, serif names, uppercase credential, short bio, sand-underlined text link. About page alternates image side.
