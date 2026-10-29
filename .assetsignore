@@ -1,0 +1,13 @@
+.git
+.github
+.gitignore
+.assetsignore
+.wrangler
+.impeccable
+.DS_Store
+*.md
+content
+assets/src
+worker.js
+wrangler.jsonc
+node_modules

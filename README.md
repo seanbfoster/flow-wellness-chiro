@@ -1,20 +1,19 @@
 # Flow Wellness Chiropractic
 
-Static front-end rebuild of flowwellnesschiro.com. Three pages (home with native lead form, About, FAQ), no build step, no backend.
+The site at https://www.flowwellnesschiro.com. Three pages (home with the reserve form, About, FAQ), no build step, no backend.
 
 - `index.html`, `about.html`, `faq.html`
 - `css/styles.css` — tokens and all styling
-- `js/main.js` — nav toggle, floor line, reveal, form validation and success state
-- `assets/` — self-hosted Manrope, optimized images, logo mark
+- `js/main.js` — nav toggle, testimonials, form validation and submit
+- `assets/` — self-hosted fonts, optimized images, logo mark
 - `content/` — original site copy captured for reference
 - `PRODUCT.md` / `DESIGN.md` — product truth and design system record
+- `CLAUDE.md` — rules for editing and publishing
 
-The lead form currently validates and shows an on-page confirmation only. Field set mirrors the practice's existing Google Form so it can be wired to a backend or the form endpoint later.
+The reserve form posts from the browser to the practice's Google Form, which receives every submission.
+
+## Hosting
+
+Cloudflare Worker `flow-wellness-chiro` serves the repo as static assets. Workers Builds deploys every push to `main`, and `.github/workflows/publish.yml` merges any pushed `claude/...` branch into `main`. `worker.js` sends flowwellnesschiro.com and flowwellness.sfostr.com to www, redirects the old Wix paths, and adds security headers. `.assetsignore` keeps docs, config and `content/` off the site.
 
 Preview locally: `python3 -m http.server 8000` and open http://localhost:8000
-
-## Lead Desk (internal CRM proof of concept)
-
-`crm/index.html` is a UI-only proof of concept for the practice's lead desk: lead ingestion from Meta, Google and the website form, automated first-touch text, a lead journey path (New → Contacted → Engaged → Booked → Patient), a shared activity feed with text/email/call/note composer, and a Convert action that hands the lead to ChiroHD. No backend; demo data lives in the browser (localStorage) and can be reset from the sidebar.
-
-Live: https://seanbfoster.github.io/flow-wellness-chiro/crm/

@@ -1,0 +1,18 @@
+{
+  "name": "flow-wellness-chiro",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "html_handling": "none"
+  },
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    { "pattern": "www.flowwellnesschiro.com", "custom_domain": true },
+    { "pattern": "flowwellnesschiro.com", "custom_domain": true },
+    { "pattern": "flowwellness.sfostr.com", "custom_domain": true }
+  ]
+}
