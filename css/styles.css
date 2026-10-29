@@ -242,6 +242,122 @@ h3 {
   justify-self: end;
 }
 
+/* Services menu */
+
+.nav-drop {
+  position: relative;
+}
+
+.nav-drop-btn {
+  appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  padding: 0.4rem 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  position: relative;
+  transition: color 0.25s;
+}
+
+.nav-drop-btn svg {
+  transition: transform 0.3s var(--ease);
+}
+
+.nav-drop-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--teal-deep);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease);
+}
+
+.nav-drop-btn:hover,
+.nav-drop-btn.current,
+.nav-drop.open .nav-drop-btn {
+  color: var(--ink);
+}
+
+.nav-drop-btn.current::after {
+  transform: scaleX(1);
+}
+
+.nav-drop.open .nav-drop-btn svg {
+  transform: rotate(180deg);
+}
+
+.nav-sub {
+  position: absolute;
+  top: calc(100% + 0.9rem);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 15.5rem;
+  display: none;
+  flex-direction: column;
+  padding: 0.6rem 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  box-shadow: 0 18px 40px -24px rgba(17, 47, 91, 0.35);
+  z-index: 60;
+}
+
+.nav-sub::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1rem;
+  height: 1rem;
+}
+
+.nav-drop.open .nav-sub,
+html:not(.js) .nav-drop:focus-within .nav-sub {
+  display: flex;
+}
+
+@media (hover: hover) and (min-width: 901px) {
+  .nav-drop:hover .nav-sub {
+    display: flex;
+  }
+
+  .nav-drop:hover .nav-drop-btn svg {
+    transform: rotate(180deg);
+  }
+}
+
+.nav .nav-sub a {
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: var(--ink-2);
+  padding: 0.65rem 1.4rem;
+  white-space: nowrap;
+}
+
+.nav .nav-sub a::after {
+  display: none;
+}
+
+.nav .nav-sub a:hover,
+.nav .nav-sub a[aria-current="page"] {
+  color: var(--teal-deep);
+  background: var(--paper-2);
+}
+
 .nav-toggle {
   display: none;
   appearance: none;
@@ -1425,6 +1541,60 @@ h3 {
   }
 }
 
+/* ---------- Service pages ---------- */
+
+.steps.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 980px;
+}
+
+.purpose blockquote {
+  margin: 0;
+}
+
+.purpose .cite {
+  margin-top: 1.5rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.purpose .cite::before {
+  content: "— ";
+}
+
+.more-faq {
+  margin-top: 2.5rem;
+}
+
+.more-lead {
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2.1vw, 1.7rem);
+  line-height: 1.5;
+  text-wrap: balance;
+}
+
+.more-links {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem 2.5rem;
+}
+
+.service-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+.service p.service-links {
+  margin-top: 1.5rem;
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1080px) {
@@ -1494,6 +1664,47 @@ h3 {
   .nav a::after {
     height: 1px;
     background: var(--sand);
+  }
+
+  .nav-drop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.25rem 0 0.5rem;
+  }
+
+  .nav-drop-btn {
+    display: none;
+  }
+
+  .nav-sub,
+  .nav-drop.open .nav-sub {
+    position: static;
+    transform: none;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .nav-sub::before {
+    display: none;
+  }
+
+  .nav .nav-sub a {
+    font-family: var(--serif);
+    font-size: clamp(1.35rem, 5.5vw, 1.6rem);
+    color: var(--ink-2);
+    padding: 0.3rem 0;
+    white-space: normal;
+  }
+
+  .nav .nav-sub a:hover,
+  .nav .nav-sub a[aria-current="page"] {
+    background: none;
   }
 
   .nav .nav-cta.btn {
@@ -1618,6 +1829,11 @@ h3 {
 
   .steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .steps.three {
+    grid-template-columns: 1fr;
+    max-width: 560px;
   }
 
   .faq-list .answer {

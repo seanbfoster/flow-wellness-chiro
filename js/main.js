@@ -25,6 +25,27 @@
     });
   }
 
+  var drop = doc.querySelector('.nav-drop');
+  if (drop) {
+    var dropBtn = drop.querySelector('.nav-drop-btn');
+    var setDrop = function (open) {
+      drop.classList.toggle('open', open);
+      dropBtn.setAttribute('aria-expanded', String(open));
+    };
+    dropBtn.addEventListener('click', function () {
+      setDrop(!drop.classList.contains('open'));
+    });
+    doc.addEventListener('click', function (e) {
+      if (!drop.contains(e.target)) setDrop(false);
+    });
+    doc.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && drop.classList.contains('open')) { setDrop(false); dropBtn.focus(); }
+    });
+    drop.addEventListener('focusout', function (e) {
+      if (!drop.contains(e.relatedTarget)) setDrop(false);
+    });
+  }
+
   var reveals = doc.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && !reduce) {
     var io = new IntersectionObserver(function (entries) {

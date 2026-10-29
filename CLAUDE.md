@@ -20,6 +20,7 @@ framework, no packages. Cloudflare serves it straight from the `main` branch of 
 | Home page: hero, reserve form, purpose, testimonials, approach, services, doctors, FAQ preview, closing | `index.html` |
 | Doctor bios | `about.html` |
 | Full FAQ | `faq.html` |
+| Service pages: pediatric, prenatal, back and neck pain (listed under Services in the menu) | `pediatric-chiropractic.html`, `prenatal-chiropractic.html`, `back-and-neck-pain.html` |
 | All styling (colors and fonts are variables at the top) | `css/styles.css` |
 | Menu, testimonials, reserve form | `js/main.js` |
 | Photos and logo | `assets/img/` |
