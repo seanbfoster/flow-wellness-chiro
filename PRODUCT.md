@@ -10,10 +10,10 @@ web
 Static HTML/CSS/JS, no framework, no backend. Delegated by the user ("front end only for now"); chosen because the site is three pages plus a form and must deploy to GitHub Pages under the seanbfoster account.
 
 ## Users
-Parents on Florida's Space Coast (Melbourne / Brevard County area) researching a chiropractor for their child, their pregnancy, or their whole family. Secondary: adults with back/neck pain, headaches, or a wellness mindset, and athletes. Most arrive from Instagram, Facebook, Google, a community event, or a friend, usually on a phone. Their job: decide whether this practice is credible and gentle enough for their kids, then get on the list for one of the first appointments.
+Parents in Palm Beach County, Florida researching a chiropractor for their child, their pregnancy, or their whole family. Secondary: adults with back/neck pain, headaches, or a wellness mindset, and athletes. Most arrive from Instagram, Facebook, Google, a community event, or a friend, usually on a phone. Their job: decide whether this practice is credible and gentle enough for their kids, then get on the list for one of the first appointments.
 
 ## Product Purpose
-Marketing site for Flow Wellness Chiropractic, a new family-and-pediatric-focused Gonstead chiropractic practice opening Winter 2026 on the Space Coast. The site exists to explain the Gonstead method, introduce the two doctors, answer the questions a hesitant parent has, and collect "reserve your spot" leads before the schedule opens. Success = a visitor submits the interest form.
+Marketing site for Flow Wellness Chiropractic, a new family-and-pediatric-focused Gonstead chiropractic practice opening Winter 2026 in Palm Beach County. The site exists to explain the Gonstead method, introduce the two doctors, answer the questions a hesitant parent has, and collect "reserve your spot" leads before the schedule opens. Success = a visitor submits the interest form.
 
 ## Positioning
 Specific Gonstead chiropractic: precise, objective-findings-based analysis (case history, X-ray when clinically appropriate, Nervoscope instrumentation, visualization, palpation) rather than routine adjusting. "To see is to know and to not see is to guess." Pediatric and prenatal specialty run by a husband-and-wife pair of Palmer Florida graduates and former collegiate athletes (swimmer, gymnast).
