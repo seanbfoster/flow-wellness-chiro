@@ -19,7 +19,7 @@ Marketing site for Flow Wellness Chiropractic, a new family-and-pediatric-focuse
 Specific Gonstead chiropractic: precise, objective-findings-based analysis (case history, X-ray when clinically appropriate, Nervoscope instrumentation, visualization, palpation) rather than routine adjusting. "To see is to know and to not see is to guess." Pediatric and prenatal specialty run by a husband-and-wife pair of Palmer Florida graduates and former collegiate athletes (swimmer, gymnast).
 
 ## Operating Context
-- Practice is pre-opening ("Coming Winter 2027"); no address published yet, no online booking live.
+- Practice is pre-opening ("Coming Winter 2027"); address: 8895 N Military Trail, Suite 201D, Palm Beach Gardens, FL 33410; no online booking live.
 - Contact: (716) 777-2047, office@flowwellnesschiro.com, Instagram @flowwellnesschiro, Facebook page.
 - Existing lead capture is a Google Form ("Future Practice Member Interest Form"); the rebuilt site's native form mirrors its fields but, per the user, only shows an on-page success state for now.
 
@@ -28,7 +28,7 @@ Specific Gonstead chiropractic: precise, objective-findings-based analysis (case
 - Lead form fields (from the Google Form): First name, Last name, Email, Phone, Preferred contact (Text/Call/Email), Who is seeking care (Myself / My child / Myself and my family / other), Interests (multi: Wellness and preventative care, Nervous system function, Back pain, Neck pain, Family care, Pregnancy, Infants & children, Athletic performance, Headaches/Migraines, Mobility, Stress resilience, Other), How did you hear about us (Community event, Instagram, Facebook, Google search, Our website, Health talk, Family or Friend, Referral from another healthcare provider, Flyer or business card, Other).
 - Front end only; no backend, no third-party form services. Must look excellent on mobile and desktop.
 - Terminology: "practice member" (their term), "adjustment", "nervous system", "Gonstead".
-- Undecided: physical address, opening date beyond "Winter 2027", pricing, insurance. Never invent these.
+- Undecided: opening date beyond "Winter 2027", pricing, insurance. Never invent these.
 
 ## Brand Commitments
 - Name: Flow Wellness Chiropractic. Logo mark (figure-with-spine, teal) is the only surviving visual asset; user chose a full visual replacement of palette and type.

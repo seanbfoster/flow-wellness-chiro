@@ -1313,10 +1313,17 @@ h3 {
   height: 52px;
 }
 
+.foot-address {
+  margin-top: 1.75rem;
+  font-style: normal;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 .foot-contact {
   list-style: none;
   padding: 0;
-  margin: 2rem 0 0;
+  margin: 1.25rem 0 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -1324,12 +1331,14 @@ h3 {
   font-size: 0.95rem;
 }
 
+.foot-address a,
 .foot-contact a {
   color: var(--ink);
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s, color 0.3s;
 }
 
+.foot-address a:hover,
 .foot-contact a:hover {
   color: var(--teal-deep);
   border-color: var(--sand);
