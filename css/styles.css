@@ -1363,6 +1363,12 @@ html:not(.js) .nav-drop:focus-within .nav-sub {
   text-wrap: pretty;
 }
 
+.page-head .eyebrow {
+  margin: 0 auto 1.5rem;
+  font-weight: 500;
+  color: var(--teal-deep);
+}
+
 .page-head p a {
   color: var(--teal-deep);
   border-bottom: 1px solid var(--sand);
@@ -1542,6 +1548,24 @@ html:not(.js) .nav-drop:focus-within .nav-sub {
 }
 
 /* ---------- Service pages ---------- */
+
+.page-head.band-head {
+  padding-bottom: clamp(3.5rem, 7vw, 5rem);
+}
+
+.section.band {
+  padding: clamp(4.5rem, 9vw, 7rem) 0;
+}
+
+.section.band.alt {
+  background: var(--paper-2);
+}
+
+.section.band .narrow > .eyebrow:first-child,
+.section.band .narrow > .center > .eyebrow:first-child {
+  margin-bottom: 1.5rem;
+}
+
 
 .steps.three {
   grid-template-columns: repeat(3, minmax(0, 1fr));

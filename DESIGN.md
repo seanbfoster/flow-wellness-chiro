@@ -28,6 +28,7 @@ A polished, minimal evolution of the practice's original identity: Cormorant Gar
 - Services: three columns separated by hairlines, thin-stroke glyphs, centered serif titles.
 - Doctors: two 4:5 portraits, serif names, uppercase credential, short bio, sand-underlined text link. About page alternates image side.
 - FAQ: native details/summary, serif questions, thin plus that rotates to a cross.
+- Service pages (pediatric, prenatal, back and neck pain): page head on paper, then full-width sections that alternate paper-2 and paper (`.section.band`, `.band.alt`) with even top and bottom padding and no hairline dividers.
 - Closing band: dune photograph washed to 62% paper, serif call to action. Footer: centered wordmark, contact links, uppercase nav, legal line.
 
 ## Motion
