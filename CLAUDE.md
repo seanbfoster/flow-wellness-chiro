@@ -43,7 +43,11 @@ framework, no packages. Cloudflare serves it straight from the `main` branch of 
   `<head>`. When the visible wording changes, change it there too:
   `index.html` holds the practice (phone, email, address, area served, social links, doctors,
   services), `about.html` the doctors, `faq.html` every question and answer word for word, and
-  each service page its service.
+  each service page its service. The home page and service pages also list the questions they
+  show word for word (`FAQPage`), and each service page has an `Article` entry whose `headline`
+  matches its `<h1>`.
+- `about.html`, `faq.html` and the service pages have a visible `.crumbs` breadcrumb that names
+  the page as its `BreadcrumbList` does. New pages get one too.
 - `llms.txt` is the short summary AI assistants read first. When the phone, email, address,
   doctors, services, opening date or list of pages changes, update it too. Never put anything in
   it the site doesn't say (prices, hours and insurance stay "not announced yet" until they are).

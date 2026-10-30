@@ -11,6 +11,8 @@
   <link rel="alternate" type="text/markdown" href="https://www.flowwellnesschiro.com/index.html.md">
   <link rel="icon" href="assets/img/favicon-64.png?v=2" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=2">
+  <link rel="preload" href="assets/img/dunes-sm.webp" as="image" media="(max-width: 700px)" fetchpriority="high">
+  <link rel="preload" href="assets/img/dunes.webp" as="image" media="(min-width: 701px)" fetchpriority="high">
   <link rel="preload" href="assets/fonts/Cormorant-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/Jost-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
@@ -176,6 +178,36 @@
           "Chiropractic care for neck pain",
           "Nervous system health"
         ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.flowwellnesschiro.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you see children?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Chiropractic care can be adapted for patients of all ages, from infants to seniors. Pediatric adjustments use gentle, age-appropriate techniques. Kids are often the ones who need chiropractic the most!"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will I be adjusted on my first visit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your chiropractor will first determine whether an adjustment is appropriate and safe based on your examination findings, or if additional examination, study, or referral is necessary."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to be in pain to benefit from chiropractic care?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, many patients choose chiropractic care as part of a proactive wellness lifestyle. Because the nervous system controls every function in the body, maintaining proper spinal health can help support overall function and quality of life."
+            }
+          }
+        ]
       }
     ]
   }
@@ -187,7 +219,7 @@
   <header class="site-head">
     <div class="wrap">
       <a class="brand" href="./" aria-label="Flow Wellness Chiropractic home">
-        <img src="assets/img/logo-mark.webp" alt="" width="42" height="42">
+        <img src="assets/img/logo-mark.webp" alt="Flow Wellness Chiropractic logo" width="42" height="42">
         <span>Flow Wellness <small>Chiropractic</small></span>
       </a>
       <nav class="nav" id="nav" aria-label="Primary">
@@ -222,7 +254,7 @@
     <section class="hero" id="top">
       <picture>
         <source media="(max-width: 700px)" srcset="assets/img/dunes-sm.webp">
-        <img src="assets/img/dunes.webp" alt="" width="2200" height="1467" fetchpriority="high">
+        <img src="assets/img/dunes.webp" alt="Wind-rippled white sand dunes" width="2200" height="1467" fetchpriority="high">
       </picture>
       <div class="hero-inner">
         <p class="eyebrow">Flow Wellness Chiropractic · Opening Winter 2027</p>
@@ -449,7 +481,7 @@
               <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 40C12 32 6 25.5 6 18.5 6 13.3 10 9.5 14.8 9.5c3.8 0 7.2 2.3 9.2 5.7 2-3.4 5.4-5.7 9.2-5.7 4.8 0 8.8 3.8 8.8 9 0 7-6 13.5-18 21.5z"/><path d="M24 32c-4.6-3.1-7-5.7-7-8.4 0-2 1.5-3.4 3.3-3.4 1.5 0 2.9.9 3.7 2.2.8-1.3 2.2-2.2 3.7-2.2 1.8 0 3.3 1.4 3.3 3.4 0 2.7-2.4 5.3-7 8.4z"/></svg>
             </div>
             <h3>Prenatal Care</h3>
-            <p>Specific adjustments tailored to moms-to-be and modified for each stage of pregnancy, to support comfort, mobility, and pelvic balance.</p>
+            <p>Specific adjustments modified for each stage of pregnancy, to support comfort, mobility, and pelvic balance.</p>
             <p class="service-links"><a class="text-link" href="prenatal-chiropractic.html">Prenatal chiropractic</a></p>
           </article>
           <article class="service reveal" style="--i:2">
@@ -457,7 +489,7 @@
               <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 40h18"/><path d="M24 40V21"/><path d="M24 29c-1.2-5.6-5.6-8.4-11-7.8.6 5.4 5 8.6 11 7.8z"/><path d="M24 23c.8-6.4 5.2-10 11.4-9.8-.2 6.4-4.8 10-11.4 9.8z"/></svg>
             </div>
             <h3>Pediatric Care</h3>
-            <p>Gentle, age-appropriate adjustments for infants and children, tailored to aid natural growth and development.</p>
+            <p>Gentle, age-appropriate adjustments for infants and children, to aid natural growth and development.</p>
             <p class="service-links"><a class="text-link" href="pediatric-chiropractic.html">Pediatric chiropractic</a></p>
           </article>
         </div>
@@ -517,7 +549,7 @@
     <section class="closing">
       <picture>
         <source media="(max-width: 700px)" srcset="assets/img/dunes-sm.webp">
-        <img src="assets/img/dunes.webp" alt="" width="2200" height="1467" loading="lazy">
+        <img src="assets/img/dunes.webp" alt="Wind-rippled white sand dunes" width="2200" height="1467" loading="lazy">
       </picture>
       <div class="narrow">
         <p class="eyebrow">Coming Winter 2027</p>
@@ -532,7 +564,7 @@
   <footer class="site-foot">
     <div class="wrap">
       <a class="brand" href="./" aria-label="Flow Wellness Chiropractic home">
-        <img src="assets/img/logo-mark.webp" alt="" width="52" height="52">
+        <img src="assets/img/logo-mark.webp" alt="Flow Wellness Chiropractic logo" width="52" height="52">
         <span>Flow Wellness <small>Chiropractic</small></span>
       </a>
       <address class="foot-address"><a href="https://www.google.com/maps/search/?api=1&amp;query=8895+N+Military+Trail+Suite+201D+Palm+Beach+Gardens+FL+33410" target="_blank" rel="noopener">8895 N Military Trail, Suite 201D<br>Palm Beach Gardens, FL 33410</a></address>
