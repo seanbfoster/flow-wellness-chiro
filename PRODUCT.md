@@ -24,7 +24,7 @@ Specific Gonstead chiropractic: precise, objective-findings-based analysis (case
 - Existing lead capture is a Google Form ("Future Practice Member Interest Form"); the rebuilt site's native form mirrors its fields but, per the user, only shows an on-page success state for now.
 
 ## Capabilities and Constraints
-- Pages: Home (with native lead form), About Us (two doctor bios), FAQ (11 Q&A), and three service pages under a Services menu: Pediatric chiropractic, Prenatal chiropractic, Back & neck pain. Contact is a section/footer, not a page.
+- Pages: Home (with native lead form), About Us (two doctor bios), FAQ (15 Q&A), and three service pages under a Services menu: Pediatric chiropractic, Prenatal chiropractic, Back & neck pain. Contact is a section/footer, not a page.
 - Lead form fields (from the Google Form): First name, Last name, Email, Phone, Preferred contact (Text/Call/Email), Who is seeking care (Myself / My child / Myself and my family / other), Interests (multi: Wellness and preventative care, Nervous system function, Back pain, Neck pain, Family care, Pregnancy, Infants & children, Athletic performance, Headaches/Migraines, Mobility, Stress resilience, Other), How did you hear about us (Community event, Instagram, Facebook, Google search, Our website, Health talk, Family or Friend, Referral from another healthcare provider, Flyer or business card, Other).
 - Front end only; no backend, no third-party form services. Must look excellent on mobile and desktop.
 - Terminology: "practice member" (their term), "adjustment", "nervous system", "Gonstead".

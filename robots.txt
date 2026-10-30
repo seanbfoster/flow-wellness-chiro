@@ -1,3 +1,5 @@
+# Search engines and AI assistants are welcome to read every page.
+# A plain-text summary for AI assistants: https://www.flowwellnesschiro.com/llms.txt
 User-agent: *
 Allow: /
 

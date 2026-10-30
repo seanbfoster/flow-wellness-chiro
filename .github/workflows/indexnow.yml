@@ -1,0 +1,48 @@
+name: IndexNow
+
+# Tells Bing (which feeds ChatGPT and Copilot search) and the other IndexNow engines which pages
+# changed, once Cloudflare has published them. The key file is 27a90e2c72e4ef93601129f63ad8084a.txt.
+
+on:
+  push:
+    branches: ["main", "claude/**"]
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    env:
+      SITE: https://www.flowwellnesschiro.com
+      KEY: 27a90e2c72e4ef93601129f63ad8084a
+      BEFORE: ${{ github.event.before }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: List the changed pages
+        id: pages
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = push ] && git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            files=$(git diff --name-only "$BEFORE" HEAD -- '*.html' llms.txt)
+          else
+            files=$(ls *.html llms.txt)
+          fi
+          urls=""
+          for f in $files; do
+            [ -f "$f" ] && [ "$f" != 404.html ] || continue
+            if [ "$f" = index.html ]; then urls="$urls $SITE/"; else urls="$urls $SITE/$f"; fi
+          done
+          echo "urls=$urls" >> "$GITHUB_OUTPUT"
+          echo "Changed:$urls"
+      - name: Wait for Cloudflare to publish, then ping IndexNow
+        if: steps.pages.outputs.urls != ''
+        env:
+          URLS: ${{ steps.pages.outputs.urls }}
+        run: |
+          sleep 150
+          jq -n --arg host "${SITE#https://}" --arg key "$KEY" --arg loc "$SITE/$KEY.txt" \
+            '{host: $host, key: $key, keyLocation: $loc, urlList: $ARGS.positional}' \
+            --args $URLS > body.json
+          cat body.json
+          curl -fsS -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' --data @body.json -w 'IndexNow HTTP %{http_code}\n'
