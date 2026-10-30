@@ -8,7 +8,7 @@ A polished, minimal evolution of the practice's original identity: Cormorant Gar
 ## Palette (css/styles.css :root)
 - Paper `#fcfbf9`, paper-2 `#f5f2ec` (form section, doctors band)
 - Ink `#112f5b` (body emphasis, nav), ink-2 `#4b5b72` (body), ink-3 `#8a94a3` (placeholders, legal)
-- Teal `#1eadbe` (brand), teal-deep `#076676` (headings, logo wordmark, buttons, eyebrows, links, focus)
+- Teal `#1eadbe` (brand), teal-tint `#e6f4f6` (home Services band), teal-deep `#076676` (headings, logo wordmark, buttons, eyebrows, links, focus)
 - Sand `#cbb492` (short rules, quote mark, link underlines), sand-tint `#efe7d8` (testimonial band)
 - Lines: ink at 14% / 8%
 
@@ -25,7 +25,7 @@ A polished, minimal evolution of the practice's original identity: Cormorant Gar
 - Purpose: centered serif body copy at 1.35–1.7rem under a 40px sand rule.
 - Testimonials: sand-tint band, left-aligned eyebrow "In their words" + h2, then a horizontal scroll-snap row of paper cards (3 across desktop, 2 tablet, 84% width with the next card peeking on phones). Each card: small sand quote mark, italic serif quote trimmed to 9 lines with a fade and a "Read more" / "Show less" text button, em-dash uppercase cite pinned to the bottom. Footer row: "Ready to begin?" + ghost Reserve button left, round hairline prev/next buttons right (above the button on phones), disabled at the ends. No autoplay. Without JavaScript the row still scrolls and nothing is trimmed.
 - Approach: five-column list under a hairline with Roman numerals in teal-deep serif.
-- Services: three paper-2 cards with small gaps between them (stacked on phones), thin-stroke glyphs, centered serif titles, and a text link pinned to the bottom of each card.
+- Services: full-width teal-tint band (the only teal background on the site) with three paper cards with small gaps between them (stacked on phones), thin-stroke glyphs, centered serif titles, and a text link pinned to the bottom of each card.
 - Doctors: two 4:5 portraits, serif names, uppercase credential, short bio, sand-underlined text link. About page alternates image side.
 - FAQ: native details/summary, serif questions, thin plus that rotates to a cross.
 - Service pages (pediatric, prenatal, back and neck pain): page head on paper, then full-width sections that alternate paper-2 and paper (`.section.band`, `.band.alt`) with even top and bottom padding and no hairline dividers.
