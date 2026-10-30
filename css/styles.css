@@ -128,6 +128,10 @@ h3 {
   display: none !important;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .center {
   text-align: center;
 }
@@ -1081,7 +1085,7 @@ html:not(.js) .nav-drop:focus-within .nav-sub {
   font-weight: 500;
   color: var(--teal-deep);
   display: block;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.45rem;
 }
 
 .steps h3 {
@@ -1102,6 +1106,10 @@ html:not(.js) .nav-drop:focus-within .nav-sub {
   font-style: italic;
   font-size: 1.1em;
   color: var(--ink);
+}
+
+#approach {
+  padding-bottom: clamp(4rem, 8vw, 6rem);
 }
 
 /* ---------- Services ---------- */
@@ -1884,7 +1892,7 @@ html:not(.js) .nav-drop:focus-within .nav-sub {
 
   .steps {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
   }
 
   .hero-actions .btn {
