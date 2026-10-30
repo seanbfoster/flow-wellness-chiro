@@ -6,9 +6,9 @@
 A polished, minimal evolution of the practice's original identity: Cormorant Garamond serif display, deep navy ink, teal accent, sand tones, and the sand-dune photograph as the only imagery beside the doctors. Centered composition, generous air, hairline rules. Nothing decorative that the content did not ask for.
 
 ## Palette (css/styles.css :root)
-- Paper `#fcfbf9`, paper-2 `#f5f2ec` (form section, doctors band)
+- Paper `#fcfbf9`, paper-2 `#f8f6f1` (form section, doctors band)
 - Ink `#112f5b` (body emphasis, nav), ink-2 `#4b5b72` (body), ink-3 `#8a94a3` (placeholders only; too light for text on paper, so the footer legal line uses ink-2)
-- Teal `#1eadbe` (brand), teal-tint `#e3f2ec` (home Services band), teal-deep `#076676` (headings, logo wordmark, buttons, eyebrows, links, focus)
+- Teal `#1eadbe` (brand), teal-tint `#ebf5f1` (home Services band, "common reasons" sections on service pages), teal-deep `#076676` (headings, logo wordmark, buttons, eyebrows, links, focus)
 - Sand `#cbb492` (short rules, quote mark, link underlines), sand-tint `#efe7d8` (testimonial band)
 - Lines: ink at 14% / 8%
 
