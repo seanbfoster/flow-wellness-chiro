@@ -1386,6 +1386,7 @@ html:not(.js) .nav-drop:focus-within .nav-sub {
   overflow: hidden;
 }
 
+.closing picture,
 .closing img {
   position: absolute;
   inset: 0;
