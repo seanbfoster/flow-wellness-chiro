@@ -28,7 +28,7 @@ A polished, minimal evolution of the practice's original identity: Cormorant Gar
 - Services: full-width teal-tint band (the only teal background on the site) with three paper cards with small gaps between them (stacked on phones), thin-stroke glyphs, centered serif titles, and a text link pinned to the bottom of each card.
 - Doctors: two 4:5 portraits, serif names, uppercase credential, short bio, sand-underlined text link. About page alternates image side.
 - FAQ: native details/summary, serif questions, thin plus that rotates to a cross.
-- Service pages (pediatric, prenatal, back and neck pain): page head on paper, then full-width sections that alternate paper-2 and paper (`.section.band`, `.band.alt`) with even top and bottom padding and no hairline dividers.
+- Service pages (pediatric, prenatal, back and neck pain): page head on the dune photo under a deep teal wash (rgba(5, 72, 84) at 80–86%) with white text and a teal-tint eyebrow, then full-width sections that alternate paper-2 and paper (`.section.band`, `.band.alt`) with even top and bottom padding and no hairline dividers.
 - Closing band: dune photograph washed to 62% paper, serif call to action. Footer: centered wordmark, contact links, uppercase nav, legal line.
 
 ## Motion

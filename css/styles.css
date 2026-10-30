@@ -1585,6 +1585,36 @@ html:not(.js) .nav-drop:focus-within .nav-sub {
 
 .page-head.band-head {
   padding-bottom: clamp(3.5rem, 7vw, 5rem);
+  background:
+    linear-gradient(rgba(5, 72, 84, 0.8), rgba(5, 72, 84, 0.86)),
+    url("../assets/img/dunes.webp") center / cover;
+}
+
+.page-head.band-head h1,
+.page-head.band-head .crumbs ol,
+.page-head.band-head .crumbs a,
+.page-head.band-head p a {
+  color: #fff;
+}
+
+.page-head.band-head p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.page-head.band-head .eyebrow {
+  color: var(--teal-tint);
+}
+
+.page-head.band-head .rule {
+  background: var(--sand);
+}
+
+@media (max-width: 900px) {
+  .page-head.band-head {
+    background-image:
+      linear-gradient(rgba(5, 72, 84, 0.8), rgba(5, 72, 84, 0.86)),
+      url("../assets/img/dunes-sm.webp");
+  }
 }
 
 .section.band {
