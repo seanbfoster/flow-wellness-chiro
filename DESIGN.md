@@ -18,7 +18,7 @@ A polished, minimal evolution of the practice's original identity: Cormorant Gar
 - Both self-hosted as latin woff2 subsets in assets/fonts.
 
 ## Components
-- Sticky translucent header: serif wordmark + logo mark left, centered uppercase nav with 1px teal underline on hover/current, small square teal button right. Mobile: circular toggle, stacked centered menu with the Reserve button inside.
+- Sticky translucent header: serif wordmark + logo mark left, centered uppercase nav with 1px teal underline on hover/current, small square teal button right. Mobile: circular toggle, stacked centered menu with the Reserve button inside; Services is a tap-to-open item that reveals its three pages underneath.
 - Hero: full-bleed dune photograph under a light paper gradient wash; centered eyebrow, serif headline with italic emphasis, light lede, primary + ghost buttons; small uppercase note at the bottom.
 - Buttons: 2px radius, uppercase tracked, teal-deep fill (hover to ink); ghost variant with hairline border.
 - Reserve section: paper-2 band, sticky serif copy on the left, form on the right with underline-only inputs, uppercase micro labels, square outlined choice chips (ink fill when selected), full-width submit, on-page success state. The fields mirror the practice's Google Form, which receives every submission.

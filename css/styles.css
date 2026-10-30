@@ -1716,24 +1716,42 @@ html:not(.js) .nav-drop:focus-within .nav-sub {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.25rem 0 0.5rem;
   }
 
   .nav-drop-btn {
-    display: none;
+    font-family: var(--serif);
+    font-size: clamp(2rem, 8vw, 2.6rem);
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ink);
+    padding: 0.5rem 0;
+    gap: 0.6rem;
   }
 
-  .nav-sub,
-  .nav-drop.open .nav-sub {
+  .nav-drop-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .nav-drop-btn::after {
+    background: var(--sand);
+  }
+
+  .nav-sub {
     position: static;
     transform: none;
-    display: flex;
+    display: none;
     align-items: center;
     min-width: 0;
-    padding: 0;
+    padding: 0 0 0.75rem;
     background: none;
     border: 0;
     box-shadow: none;
+  }
+
+  .nav-drop.open .nav-sub {
+    display: flex;
   }
 
   .nav-sub::before {

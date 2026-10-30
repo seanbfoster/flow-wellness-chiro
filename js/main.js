@@ -9,6 +9,11 @@
     doc.body.classList.toggle('nav-open', open);
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    var d = doc.querySelector('.nav-drop');
+    if (!open && d) {
+      d.classList.remove('open');
+      d.querySelector('.nav-drop-btn').setAttribute('aria-expanded', 'false');
+    }
   }
   if (toggle && nav) {
     toggle.addEventListener('click', function () {
