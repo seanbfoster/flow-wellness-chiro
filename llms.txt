@@ -1,0 +1,36 @@
+# Flow Wellness Chiropractic
+
+> Flow Wellness Chiropractic is a family and pediatric chiropractic office in Palm Beach Gardens, Florida, opening Winter 2027. Dr. Carter Matteson and Dr. Corey Matteson use the Gonstead technique to care for infants, children, moms-to-be and adults across Palm Beach County. Scheduling is not open yet. Families can reserve a spot and the office contacts them first when it opens.
+
+Key facts:
+
+- Name: Flow Wellness Chiropractic
+- What it is: a chiropractic office focused on pediatric, prenatal and family care, using the Gonstead technique
+- Status: opening Winter 2027. Appointments cannot be booked yet. Reserve a spot at https://www.flowwellnesschiro.com/#reserve
+- Address: 8895 N Military Trail, Suite 201D, Palm Beach Gardens, FL 33410, United States
+- Area served: Palm Beach County, Florida, including Palm Beach Gardens, Jupiter, North Palm Beach, Juno Beach and West Palm Beach
+- Phone: (716) 777-2047
+- Email: office@flowwellnesschiro.com
+- Website: https://www.flowwellnesschiro.com/
+- Instagram: https://www.instagram.com/flowwellnesschiro/ (@flowwellnesschiro)
+- Facebook: https://www.facebook.com/people/Flow-Wellness-Chiropractic/61591768892424/
+- Dr. Carter Matteson: Doctor of Chiropractic, Palmer College of Chiropractic Florida. Bachelor's degree from Florida Institute of Technology. Former collegiate swimmer.
+- Dr. Corey Matteson: Doctor of Chiropractic, Palmer College of Chiropractic Florida. Bachelor's degree from Eastern Michigan University. Former collegiate gymnast.
+- Services: pediatric chiropractic for infants, children and teens; prenatal chiropractic with adjustments modified for each stage of pregnancy; corrective care for back pain, neck pain and headaches.
+- Method: the Gonstead analysis. A case history, X-rays when clinically appropriate, Nervoscope instrumentation, visualization of posture, movement and gait, and palpation. Each adjustment is based on what this analysis finds.
+- Not announced yet: the exact opening date, office hours, prices and insurance. For these, contact the office by phone or email.
+
+Every page is also available as Markdown: add `.md` to its address (for example https://www.flowwellnesschiro.com/about.html.md), or request the page with the header `Accept: text/markdown`.
+
+## Pages
+
+- [Home](https://www.flowwellnesschiro.com/): the practice, the Gonstead approach, services, the doctors, practice member testimonials and the reserve-your-spot form
+- [About the doctors](https://www.flowwellnesschiro.com/about.html): full bios of Dr. Carter Matteson and Dr. Corey Matteson
+- [Pediatric chiropractic](https://www.flowwellnesschiro.com/pediatric-chiropractic.html): gentle, age-appropriate care for infants, kids and teens, and what a child's visit looks like
+- [Prenatal chiropractic](https://www.flowwellnesschiro.com/prenatal-chiropractic.html): care adapted to each stage of pregnancy, for comfort, mobility and pelvic balance
+- [Back and neck pain](https://www.flowwellnesschiro.com/back-and-neck-pain.html): finding the cause of back pain, neck pain and headaches with the Gonstead analysis
+- [FAQ](https://www.flowwellnesschiro.com/faq.html): Gonstead care, the first visit, X-rays, children, pregnancy, location, opening date and how to book
+
+## Optional
+
+- [Full site text](https://www.flowwellnesschiro.com/llms-full.txt): every page above as Markdown in one file

@@ -27,6 +27,10 @@ framework, no packages. Cloudflare serves it straight from the `main` branch of 
 | Fonts | `assets/fonts/` |
 | Design system: colors, type, layout, components | `DESIGN.md` |
 | Who the practice is, audience, voice, terms | `PRODUCT.md` |
+| Page not found (shown at any missing address) | `404.html` |
+| Summary for AI assistants (ChatGPT, Claude, Perplexity and others) | `llms.txt` |
+| Turns each page into Markdown for AI assistants at `/page.html.md` and `/llms-full.txt` | `markdown.js` (run by `worker.js`) |
+| Tells Bing and other IndexNow search engines about changed pages after each push | `.github/workflows/indexnow.yml` and the key file `27a90e2c72e4ef93601129f63ad8084a.txt` |
 | Copy from the old Wix site, for reference only | `content/` |
 
 ## Rules
@@ -35,18 +39,30 @@ framework, no packages. Cloudflare serves it straight from the `main` branch of 
   reuse the classes in `css/styles.css` instead of adding new colors, fonts or one-off styles.
 - The header, footer, phone, email and social links repeat on every page. When one changes,
   change it in every `.html` file.
-  The phone, email, address, social links and doctors are also in the business details for
-  Google (`application/ld+json`) in the `<head>` of `index.html`; update them there too.
+- Every page has business details for Google and AI assistants (`application/ld+json`) in its
+  `<head>`. When the visible wording changes, change it there too:
+  `index.html` holds the practice (phone, email, address, area served, social links, doctors,
+  services), `about.html` the doctors, `faq.html` every question and answer word for word, and
+  each service page its service.
+- `llms.txt` is the short summary AI assistants read first. When the phone, email, address,
+  doctors, services, opening date or list of pages changes, update it too. Never put anything in
+  it the site doesn't say (prices, hours and insurance stay "not announced yet" until they are).
+- When a page's wording changes, set its `<lastmod>` in `sitemap.xml` to that day.
 - Every page footer ends with the `sfostr.com` link (`.foot-site`). Keep it.
 - A new page copies the `<head>`, header and footer of `about.html`, gets its own title,
-  description and canonical link, goes in the nav and footer of every page, and goes in
-  `sitemap.xml`.
+  description, canonical link, `text/markdown` alternate link and `application/ld+json`, goes in
+  the nav and footer of every page, and goes in `sitemap.xml` and `llms.txt`.
+- Links to the home page are `./` and `./#reserve`, never `index.html`, so Google sees one home
+  address. `404.html` is the exception: it is shown at any missing address, so every path in it
+  starts with `/`.
 - Photos: WebP, at most 2000px wide and about 300 KB, with `width`, `height` and real `alt` text.
 - The reserve form sends to the practice's Google Form. Don't change the form address, the
   `entry.` numbers in `js/main.js`, or the form field names, or submissions stop arriving. A new
   field has to be added to the Google Form first, then mapped to its `entry.` number.
 - Canonical links and `og:` tags use full `https://www.flowwellnesschiro.com/...` addresses.
-- Leave `worker.js`, `wrangler.jsonc`, `.assetsignore` and `.github/` alone unless asked to change
-  hosting or redirects. `worker.js` redirects the old Wix addresses and the bare domain to www.
+- Leave `worker.js`, `markdown.js`, `wrangler.jsonc`, `.assetsignore` and `.github/` alone unless
+  asked to change hosting or redirects. `worker.js` redirects the old Wix addresses, the bare
+  domain, `index.html` and addresses without `.html` to the right page, serves `404.html` for
+  missing pages, and serves Markdown copies of the pages to AI assistants.
 - Files ending in `.md`, files starting with `.`, and `content/` are not published.
 - Commit messages say what changed on the site in plain words.

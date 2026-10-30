@@ -1369,7 +1369,8 @@ html:not(.js) .nav-drop:focus-within .nav-sub {
   color: var(--teal-deep);
 }
 
-.page-head p a {
+.page-head p a,
+.faq-list .answer a {
   color: var(--teal-deep);
   border-bottom: 1px solid var(--sand);
 }
@@ -1492,7 +1493,7 @@ html:not(.js) .nav-drop:focus-within .nav-sub {
   margin-top: 2.5rem;
   font-size: 0.78rem;
   font-weight: 300;
-  color: var(--ink-3);
+  color: var(--ink-2);
 }
 
 .foot-site {
@@ -1502,7 +1503,7 @@ html:not(.js) .nav-drop:focus-within .nav-sub {
 }
 
 .foot-site a {
-  color: var(--ink-3);
+  color: var(--ink-2);
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s, color 0.3s;
 }

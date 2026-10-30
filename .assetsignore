@@ -9,5 +9,6 @@
 content
 assets/src
 worker.js
+markdown.js
 wrangler.jsonc
 node_modules
