@@ -1662,6 +1662,12 @@ html:not(.js) .nav-drop:focus-within .nav-sub {
     display: inline-flex;
   }
 
+  .site-head .brand,
+  .nav-toggle {
+    position: relative;
+    z-index: 50;
+  }
+
   .head-cta {
     display: none;
   }
