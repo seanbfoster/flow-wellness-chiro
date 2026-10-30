@@ -1761,7 +1761,7 @@ html:not(.js) .nav-drop:focus-within .nav-sub {
   .nav .nav-sub a {
     font-family: var(--serif);
     font-size: clamp(1.35rem, 5.5vw, 1.6rem);
-    color: var(--ink-2);
+    color: var(--teal-deep);
     padding: 0.3rem 0;
     white-space: normal;
   }
