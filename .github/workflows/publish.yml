@@ -23,5 +23,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git merge --no-edit "origin/$GITHUB_REF_NAME"
-          git push origin HEAD:main
+          # A direct push to main can land while this runs, so start again from the new main.
+          # A real merge conflict stops the job at once and leaves main alone.
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main "$GITHUB_REF_NAME"
+            git reset --hard origin/main
+            git merge --no-edit "origin/$GITHUB_REF_NAME"
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 5
+          done
+          exit 1
