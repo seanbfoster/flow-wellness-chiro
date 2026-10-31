@@ -5,10 +5,21 @@ framework, no packages. Cloudflare serves it straight from the `main` branch of 
 
 ## Publishing
 
+GitHub is the source of truth. The `main` branch is exactly what is live, and more than one person
+and session works on it, so every change has to go through it.
+
+- Start every task from the latest `main`. On `main`, run `git pull --ff-only`. On a `claude/...`
+  branch, run `git fetch origin main && git merge origin/main`.
 - Every push goes live. A push to `main` is on www.flowwellnesschiro.com in about a minute.
   A push to a `claude/...` branch goes live too: a GitHub Action merges it into `main` first.
-- When a change is done, commit it and push it. Don't open a pull request or wait for a review.
-  Then say what changed and that it will be live in about a minute.
+- When a change is done, commit it and push it without being asked. Don't open a pull request or
+  wait for a review. Then say what changed and that it will be live in about a minute.
+- After pushing a `claude/...` branch, wait 30 seconds and confirm it reached `main`:
+  `git fetch origin main && git merge-base --is-ancestor HEAD origin/main`. If that fails, the
+  Action hit a merge conflict and the change is not live. Merge `origin/main`, fix the conflict,
+  push again and confirm again. Don't say a change is live until this passes.
+- Never publish any other way: no `wrangler deploy` by hand, no edits in the Cloudflare dashboard.
+  Anything that skips GitHub gets overwritten by the next push.
 - To undo a change, revert its commit and push.
 - Before pushing, check that every file, image and link you touched exists at the path you used.
   Preview locally with `python3 -m http.server 8000` and open http://localhost:8000.
@@ -69,4 +80,5 @@ framework, no packages. Cloudflare serves it straight from the `main` branch of 
   domain, `index.html` and addresses without `.html` to the right page, serves `404.html` for
   missing pages, and serves Markdown copies of the pages to AI assistants.
 - Files ending in `.md`, files starting with `.`, and `content/` are not published.
-- Commit messages say what changed on the site in plain words.
+- Commit messages say what changed on the site in plain words and stop there: no `Co-Authored-By`,
+  session link or other credit line.
