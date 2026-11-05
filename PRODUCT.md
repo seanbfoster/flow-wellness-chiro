@@ -20,7 +20,7 @@ Specific Gonstead chiropractic: precise, objective-findings-based analysis (case
 
 ## Operating Context
 - Practice is pre-opening ("Coming Winter 2027"); address: 8895 N Military Trail, Suite 201D, Palm Beach Gardens, FL 33410; no online booking live.
-- Contact: (716) 777-2047, office@flowwellnesschiro.com, Instagram @flowwellnesschiro, Facebook page.
+- Contact: (561) 258-9209, office@flowwellnesschiro.com, Instagram @flowwellnesschiro, Facebook page.
 - Existing lead capture is a Google Form ("Future Practice Member Interest Form"); the rebuilt site's native form mirrors its fields but, per the user, only shows an on-page success state for now.
 
 ## Capabilities and Constraints
